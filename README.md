@@ -1,7 +1,7 @@
 # DragLayout
 Android拖动，缩放，自定义内容，控件制作（可拖动缩放RelativeLayout定制）
 先上效果图：
-
+![这里写图片描述](https://github.com/androlua/DragLayout/raw/master/图片文件夹名称/1000.gif)
 
 一.     制作此控件的起源
 项目需要一个可以拖动的控件，在网上可以找到很多例子，有图片拖动控件，有textview拖动控件。但是项目中需要控件同时可以动态通过手指调整尺寸，并且控件的内容不固定，需要自定义内容，即可以添加任意内容到拖动控件内。因此，编写此控件。
@@ -12,7 +12,7 @@ Android拖动，缩放，自定义内容，控件制作（可拖动缩放Relativ
 a 位置坐标：
 屏幕左上角是坐标原点（0,0），原点向右延伸是x正轴方向，原点向下延伸是y轴正方向
 自定义控件的坐标位置是相对于父控件的：getTop()、getBottom()，getLeft()，getRight()，这几个函数用于获取自定义view在父布局坐标系的位置。
-
+![这里写图片描述](https://github.com/androlua/DragLayout/raw/master/图片文件夹名称/1001.png)
 b  触摸感知
 继承onTouchEvent，获取用户对自定义控件的触摸事件（down,move,up）
 根据触摸的位置event.getX()，event.getY()，以及其他位置，判断要执行的的操作。包括根据位移移动，根据位移缩放。根据位移判断是否到达边界。
@@ -25,7 +25,7 @@ LayoutParams：这个参数一般是用于Android的xml布局文件里面，比�
 假定在一个LinearLayout里面放一个imageView，通过修改ImageView的这几个参数就可以让ImageView在LinearLayout里面自由的移动位置：如图：
 对自定义控件的位置设置转化为：（marginLeft，marginTop，width，height）
 其中，marginLeft和marginTop负责确定控件的位置，width和height确定控件的大小，（可以看着图按自己的方式理解），总之是，通过这几参数的修改，可以使得控件在LinearLayout或RelativeLayout布局内自由的移动并且变换大小。
-
+![这里写图片描述](https://github.com/androlua/DragLayout/raw/master/图片文件夹名称/1003.png)
 四.     可移动控件代码编写
 原理都写清楚了，开始编写代码，定义一个类继承RelativeLayout，覆盖，onTouchEvent，然后编写逻辑代码：核心代码如下（都粘贴上看着心累）：
 [java] view plain copy
