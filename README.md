@@ -12,7 +12,7 @@ Android拖动，缩放，自定义内容，控件制作（可拖动缩放Relativ
 a 位置坐标：
 屏幕左上角是坐标原点（0,0），原点向右延伸是x正轴方向，原点向下延伸是y轴正方向
 自定义控件的坐标位置是相对于父控件的：getTop()、getBottom()，getLeft()，getRight()，这几个函数用于获取自定义view在父布局坐标系的位置。<br>
-![这里写图片描述](https://github.com/androlua/DragLayout/raw/master/图片文件夹名称/1001.png)
+![这里写图片描述](https://github.com/androlua/DragLayout/raw/master/1001.png)
 b  触摸感知
 继承onTouchEvent，获取用户对自定义控件的触摸事件（down,move,up）
 根据触摸的位置event.getX()，event.getY()，以及其他位置，判断要执行的的操作。包括根据位移移动，根据位移缩放。根据位移判断是否到达边界。
